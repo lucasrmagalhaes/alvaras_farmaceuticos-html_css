@@ -27,23 +27,29 @@
     <section>
       <div class="row d-flex justify-content-center align-items-center">
             <div class="d-flex flex-column gap-4 col-12 col-md-8 col-lg-6 col-xl-5">
+             <div class="d-flex justify-content-center align-items-center">
               <p class="text-white fs-4">Crie sua conta</p>
-                  <div class="mb-3">
+             </div>
+              
+
+                  <div class="d-flex align-items-center justify-content-center">
+                    
                     <label class="imagem" for="imagem_input" tabindex="0">
                       <span class="escolha_imagem"><i class="bi bi-file-image"></i></span>
                     </label>
                     <input type="file" accept="image/*" id="imagem_input">
                   </div>
+                  
                   <div class="d-flex justify-content-around">
                     <div class="card text-white card_container">
                       <div class="card-body p-4 text-center">
-                        <div class="form-check form-check-inline mb-3">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cliente" value="cliente">
-                            <label class="form-check-label" for="inlineRadio1">Cliente</label>
-                        </div>
+                          <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cliente" value="cliente">
+                                  <label class="form-check-label" for="cliente">Cliente</label>
+                              </div>
                               <div class="form-check form-check-inline mb-3">
                                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fornecedor" value="fornecedor">
-                                  <label class="form-check-label" for="inlineRadio2">Fornecedor</label>
+                                  <label class="form-check-label" for="fornecedor">Fornecedor</label>
                               </div>
                     
                               <form class="row">
@@ -75,11 +81,15 @@
                                   </div>
                               </form>
                             </div>
-                          </div>
+                        </div>
                     </div>
-                    <div>
-                      <a href="./cadastro.html" target="_blank" type="button" class="btn btn-success btn_save">Salvar  </a>
-                  </div>
+                    
+                    <div class="d-flex flex-column mb-5">
+                      <div>
+                        <a href="#" target="_blank" type="button" class="btn btn-success btn_save" onclick="redirecionar()">Salvar  </a>
+                      </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -90,5 +100,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>

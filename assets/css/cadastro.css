@@ -1,5 +1,15 @@
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background: #93A096;
+}
+
+.container {
+    flex: 1;
 }
 
 .card_container {

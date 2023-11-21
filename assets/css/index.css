@@ -2,6 +2,11 @@ body {
     background: #93A096;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .card_container {
     background: #437A42;
     border-radius: 1rem;

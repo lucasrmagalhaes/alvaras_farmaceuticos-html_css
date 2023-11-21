@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" /> -->
-
     <title>Plataforma de Alvarás Farmacêuticos</title>
 
     <link
@@ -20,16 +18,175 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/fornecedor.css" />
+    <link rel="stylesheet" href="./assets/css/cliente.css" />
   </head>
 
   <body>
-    <h1>Fornecedor</h1>
+    <main role="main">
+      <nav class="navbar d-flex justify-content-center align-items-center">
+        <h1>Fornecedor</h1>
+      </nav>
+  
+      <section class="container py-4">
+        <div class="d-flex gap-2 justify-content-center mb-5">
+          <input class="form-control" type="text" placeholder="Digite o CNPJ" />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+          <button class="btn btn-lg btn-success">Buscar</button>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <div style="max-width: 200px;">
+            <div class="d-flex align-items-center justify-content-center">
+              <label class="imagem" for="imagem_input" tabindex="0">
+                <span class="escolha_imagem d-flex align-items-center justify-content-center">
+                  <i class="bi bi-file-image"></i>
+                </span>
+              </label>
+  
+              <input type="file" accept="image/*" id="imagem_input" aria-label="Imagem" />
+            </div>
+  
+            <div
+              class="btn_upload row d-flex justify-content-center align-items-center mt-5 mb-5"
+            >
+              <button type="button" class="btn btn-secondary" id="uploadBtn" style="width: 200px">
+                Upload
+              </button>
+            </div>
+          </div>
+  
+          <div style="max-width: 200px;">
+            <div class="d-flex align-items-center justify-content-center">
+              <label class="imagem" for="imagem_input" tabindex="0">
+                <span
+                  class="escolha_imagem d-flex align-items-center justify-content-center"
+                  ><i class="bi bi-file-image"></i></span>
+              </label>
+  
+              <input type="file" accept="image/*" id="imagem_input" aria-label="Imagem" />
+            </div>
+            
+            <div
+              class="btn_upload row d-flex justify-content-center align-items-center mt-5 mb-5"
+            >
+              <button type="button" class="btn btn-secondary" id="uploadBtn" style="width: 200px">
+                Atualizar
+              </button>
+            </div>
+          </div>
+  
+          <div style="max-width: 200px;">
+            <div class="d-flex align-items-center justify-content-center">
+              <label class="imagem" for="imagem_input" tabindex="0">
+                <span
+                  class="escolha_imagem d-flex align-items-center justify-content-center"
+                  ><i class="bi bi-file-image"></i
+                ></span>
+              </label>
+  
+              <input type="file" accept="image/*" id="imagem_input" aria-label="Imagem" />
+            </div>
+            <div
+              class="btn_upload row d-flex justify-content-center align-items-center mt-5 mb-5"
+            >
+              <button type="button" class="btn btn-secondary" id="uploadBtn" style="width: 200px">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="modal" tabindex="-1" role="dialog" id="uploadModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Enviar imagem.</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  id="closeBtn"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Deseja realizar o upload?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="enviarBtn">
+                  Enviar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                  id="cancelarBtn"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
+
+      <script src="./assets/js/scripts.js"></script>
+    </main>
+    
+    <footer class="footer mt-auto py-3">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between border-bottom p-3"
+      >
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-4">
+          <h6>Plataforma de Alvarás Farmacêuticos</h6>
+        </div>
+  
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-4">
+          <a href="" class="me-4 text-reset">
+            <i class="bi-youtube"></i>
+          </a>
+  
+          <a href="" class="me-4 text-reset">
+            <i class="bi-instagram"></i>
+          </a>
+          
+          <a href="" class="me-4 text-reset">
+            <i class="bi-linkedin"></i>
+          </a>
+        </div>
+      </section>
+  
+      <section class="rodape">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3">
+              <h6 class="text-uppercase fw-bold mb-4">Termos e Privacidade</h6>
+            </div>
+  
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Cookies</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <div class="text-center" style="background-color: #437a42">
+        Cervosul Distribuidora de Medicamentos LTDA - Eldorado do Sul /RS © 2023
+        Copyright:
+        <a class="text-reset fw-bold" href="#">www.cervosulonline.com.br</a>
+      </div>
+    </footer>
   </body>
+
 </html>
